@@ -20,6 +20,7 @@ package com.raymond.demo.andfixdemo;
 import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.webkit.DownloadListener;
 import android.widget.Button;
@@ -72,16 +73,18 @@ public class MainActivity extends Activity implements DownloadStatusListener {
 	}
 
 	public void showToast(View v) {
-		A.showToast(this);
+		Fix.showToast(this);
 	}
 
 	private void downLoadingFile(){
 		if(downloadManager.query(downloadId) == DownloadManager.STATUS_NOT_FOUND){
 			File filesDir = getExternalFilesDir("");
-			Uri downloadUri = Uri.parse("");
-			Uri destinationUri = Uri.parse(filesDir+"/out.apatch");
+			Uri downloadUri = Uri.parse("https://github.com/THEONE10211024/HotFixDemo/blob/master/app/src/main/java/patch/out.apatch");
+			String patchFileString = Environment.getExternalStorageDirectory()
+					.getAbsolutePath() + "/out.apatch";
+			Uri destinationUri = Uri.parse(patchFileString);
 			final DownloadRequest downloadRequest = new DownloadRequest(downloadUri)
-					.setDestinationURI(destinationUri).setPriority(DownloadRequest.Priority.LOW)
+					.setDestinationURI(destinationUri).setPriority(DownloadRequest.Priority.HIGH)
 					.setRetryPolicy(new DefaultRetryPolicy())
 					.setDownloadListener(this);
 			downloadId = downloadManager.add(downloadRequest);

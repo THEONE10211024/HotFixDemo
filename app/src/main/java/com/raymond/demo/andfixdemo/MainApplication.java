@@ -62,13 +62,14 @@ public class MainApplication extends Application {
 		// add patch at runtime
 		try {
 			// .apatch file path
-//			String patchFileString = Environment.getExternalStorageDirectory()
-//					.getAbsolutePath() + APATCH_PATH;
-			File filesDir = getExternalFilesDir("");
+			String patchFileString = Environment.getExternalStorageDirectory()
+					.getAbsolutePath() + APATCH_PATH;
+			/*File filesDir = getExternalFilesDir("");
 			Uri destinationUri = Uri.parse(filesDir+"/out.apatch");
-			mPatchManager.addPatch(destinationUri.getPath());
+			mPatchManager.addPatch(destinationUri.getPath());*/
+			mPatchManager.addPatch(patchFileString);
 
-			Log.d(TAG, "apatch:" + destinationUri.getPath() + " added.");
+			Log.d(TAG, "apatch:" + patchFileString + " added.");
 		} catch (IOException e) {
 			Log.e(TAG, "", e);
 		}
