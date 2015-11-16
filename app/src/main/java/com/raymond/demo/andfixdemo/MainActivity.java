@@ -72,7 +72,7 @@ public class MainActivity extends Activity implements DownloadStatusListener {
 	}
 
 	public void showToast(View v) {
-		Fix.showToast(this);
+		A.showToast(this);
 	}
 
 	private void downLoadingFile(){
