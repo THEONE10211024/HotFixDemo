@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndFixDemoX.iml" filepath="$PROJECT_DIR$/AndFixDemoX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/andfix/andfix.iml" filepath="$PROJECT_DIR$/andfix/andfix.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

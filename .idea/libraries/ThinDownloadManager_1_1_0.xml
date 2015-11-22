@@ -5,6 +5,8 @@
       <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.mani/ThinDownloadManager/1.1.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mani/ThinDownloadManager/1.1.0/4de192e7390491bbf42840d275f399a10aa1caaf/ThinDownloadManager-1.1.0-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>
