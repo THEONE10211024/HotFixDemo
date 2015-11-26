@@ -82,6 +82,8 @@ public class MainActivity extends Activity implements DownloadStatusListener {
 		if(downloadManager.query(downloadId) == DownloadManager.STATUS_NOT_FOUND){
 			File filesDir = getExternalFilesDir("");
 			Uri downloadUri = Uri.parse("https://raw.githubusercontent.com/THEONE10211024/HotFixDemo/master/app/src/main/java/patch/out.apatch");
+//			Uri downloadUri = Uri.parse("https://raw.githubusercontent.com/alibaba/AndFix/master/tools/apkpatch-1.0.3.zip");
+
 			String patchFileString = Environment.getExternalStorageDirectory()
 					.getAbsolutePath() + MainApplication.APATCH_PATH;
 			Uri destinationUri = Uri.parse(patchFileString);
