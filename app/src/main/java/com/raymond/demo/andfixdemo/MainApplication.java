@@ -38,7 +38,7 @@ import java.io.IOException;
 public class MainApplication extends Application {
 	private static final String TAG = "euler";
 
-	private static final String APATCH_PATH = "/out.apatch";
+	public static final String APATCH_PATH = "/out.apatch";
 	/**
 	 * patch manager
 	 */
@@ -74,5 +74,8 @@ public class MainApplication extends Application {
 			Log.e(TAG, "", e);
 		}
 
+	}
+	public PatchManager getPatchManager(){
+		return mPatchManager;
 	}
 }

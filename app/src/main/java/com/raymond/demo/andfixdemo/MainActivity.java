@@ -21,11 +21,13 @@ import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.util.Log;
 import android.view.View;
 import android.webkit.DownloadListener;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.alipay.euler.andfix.patch.PatchManager;
 import com.raymond.demo.andfixdemo.test.A;
 import com.raymond.demo.andfixdemo.test.Fix;
 import com.tencent.bugly.crashreport.CrashReport;
@@ -36,6 +38,7 @@ import com.thin.downloadmanager.DownloadStatusListener;
 import com.thin.downloadmanager.ThinDownloadManager;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URI;
 
 /**
@@ -47,7 +50,6 @@ import java.net.URI;
  */
 public class MainActivity extends Activity implements DownloadStatusListener {
 	private static final String TAG = "euler";
-
 	private Button btnHook;
 	private ThinDownloadManager downloadManager;
 	private int downloadId;
@@ -79,9 +81,9 @@ public class MainActivity extends Activity implements DownloadStatusListener {
 	private void downLoadingFile(){
 		if(downloadManager.query(downloadId) == DownloadManager.STATUS_NOT_FOUND){
 			File filesDir = getExternalFilesDir("");
-			Uri downloadUri = Uri.parse("https://github.com/THEONE10211024/HotFixDemo/blob/master/app/src/main/java/patch/out.apatch");
+			Uri downloadUri = Uri.parse("https://raw.githubusercontent.com/THEONE10211024/HotFixDemo/master/app/src/main/java/patch/out.apatch");
 			String patchFileString = Environment.getExternalStorageDirectory()
-					.getAbsolutePath() + "/out.apatch";
+					.getAbsolutePath() + MainApplication.APATCH_PATH;
 			Uri destinationUri = Uri.parse(patchFileString);
 			final DownloadRequest downloadRequest = new DownloadRequest(downloadUri)
 					.setDestinationURI(destinationUri).setPriority(DownloadRequest.Priority.HIGH)
@@ -93,6 +95,21 @@ public class MainActivity extends Activity implements DownloadStatusListener {
 
 	@Override
 	public void onDownloadComplete(int i) {
+		// add patch at runtime
+		try {
+			// .apatch file path
+			String patchFileString = Environment.getExternalStorageDirectory()
+					.getAbsolutePath() + MainApplication.APATCH_PATH;
+			/*File filesDir = getExternalFilesDir("");
+			Uri destinationUri = Uri.parse(filesDir+"/out.apatch");
+			mPatchManager.addPatch(destinationUri.getPath());*/
+			MainApplication mp = (MainApplication) getApplication();
+			mp.getPatchManager().addPatch(patchFileString);
+
+			Log.d(TAG, "apatch:" + patchFileString + " added.");
+		} catch (IOException e) {
+			Log.e(TAG, "", e);
+		}
 		Toast.makeText(this,"Hook Success",Toast.LENGTH_SHORT).show();
 	}
 
