@@ -43,7 +43,7 @@ import java.net.URI;
  * 
  * @author luohou
  * @author sanping.li@alipay.com
- *
+ *http://blog.csdn.net/wjr2012/article/details/7993722 ndk的调试
  */
 public class MainActivity extends Activity implements DownloadStatusListener {
 	private static final String TAG = "euler";

@@ -2,11 +2,53 @@
 <items version="2" >
 
     <item
+        jar="E:\files\android\git\AndFixDemoX\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="E:\files\android\git\AndFixDemoX\app\build\intermediates\pre-dexed\debug\classes-333036907ac47ff503cdf8b6ee6aeeee791d5416.jar" />
+    </item>
+    <item
         jar="E:\files\android\git\AndFixDemoX\app\build\intermediates\exploded-aar\AndFixDemoX\andfix\unspecified\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="167af93698d1ea8cf5e17cf8344fd26baa32e0d9">
+        sha1="d1fbbf89bf564b72ea022ba9e4f11caf86221a97">
         <dex dex="E:\files\android\git\AndFixDemoX\app\build\intermediates\pre-dexed\debug\classes-275f2c728a9f8795210ec195ba750247e00d21e1.jar" />
+    </item>
+    <item
+        jar="D:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="E:\files\android\git\AndFixDemoX\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-9792d51791d92eddc0d9758885c1364396bdbf7e.jar" />
+    </item>
+    <item
+        jar="E:\files\android\git\AndFixDemoX\app\build\intermediates\exploded-aar\com.tencent.bugly\crashreport\1.2.3.8\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ab6347c797b104c70d14ab65041332562c777659">
+        <dex dex="E:\files\android\git\AndFixDemoX\app\build\intermediates\pre-dexed\debug\classes-b77494f3e016b4ab420510fbdc71fb813051fd48.jar" />
+    </item>
+    <item
+        jar="E:\files\android\git\AndFixDemoX\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="E:\files\android\git\AndFixDemoX\app\build\intermediates\pre-dexed\debug\classes-bf86e90014d2c575b588ca313bf0dff38fe0ce72.jar" />
+    </item>
+    <item
+        jar="E:\files\android\git\AndFixDemoX\app\build\intermediates\exploded-aar\com.mani\ThinDownloadManager\1.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6208ce68bcb4c13d933fe6e69cbbc15355f21fe7">
+        <dex dex="E:\files\android\git\AndFixDemoX\app\build\intermediates\pre-dexed\debug\classes-3d8bf8e8e7bc50ef374c13d108084bb1ce91e5f6.jar" />
+    </item>
+    <item
+        jar="E:\files\android\git\AndFixDemoX\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="E:\files\android\git\AndFixDemoX\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-7221cd47feb840e843eb3c056681b8e70e71a2c3.jar" />
     </item>
 
 </items>
