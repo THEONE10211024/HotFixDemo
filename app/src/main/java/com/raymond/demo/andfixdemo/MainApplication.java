@@ -24,7 +24,7 @@ import android.util.Log;
 
 import com.alipay.euler.andfix.patch.PatchManager;
 import com.raymond.demo.andfixdemo.exception.CrashHandler;
-import com.tencent.bugly.crashreport.CrashReport;
+//import com.tencent.bugly.crashreport.CrashReport;
 
 import java.io.File;
 import java.io.IOException;
@@ -47,7 +47,7 @@ public class MainApplication extends Application {
 	@Override
 	public void onCreate() {
 		super.onCreate();
-		CrashReport.initCrashReport(this, "900012850", false);
+//		CrashReport.initCrashReport(this, "900012850", false);
 		CrashHandler.getInstance().init(this);
 
 		// initialize

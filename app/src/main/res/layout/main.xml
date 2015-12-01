@@ -8,7 +8,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="click me!"
-        android:onClick="showToast"/>
+        android:id="@+id/btn_click" />
+   <!-- android:onClick="showToast"-->
 
     <Button
         android:layout_width="match_parent"
@@ -16,6 +17,14 @@
         android:text="Hook"
         android:id="@+id/btn_hook"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Action"
+        android:id="@+id/btn_action"
+        android:layout_below="@+id/btn_click"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

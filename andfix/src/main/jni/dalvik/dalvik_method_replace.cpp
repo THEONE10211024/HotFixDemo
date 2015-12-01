@@ -211,7 +211,7 @@ extern void __attribute__ ((visibility ("hidden"))) dalvik_replaceMethod(
 	if (!dvmIsStaticMethod(meth))
 		argsSize++;
 	meth->registersSize = meth->insSize = argsSize;
-	meth->insns = (void*) target;
+	meth->insns = (void*) target;//在Dalvik中，每个方法都是一个Method的结构体，其中当这个方法是native的时候，Method的insns这个指针会指向native方法的起始地址。
 
 	meth->nativeFunc = dalvik_dispatcher;
 }

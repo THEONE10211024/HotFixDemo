@@ -76,7 +76,7 @@ public class PatchManager {
 	public PatchManager(Context context) {
 		mContext = context;
 		mAndFixManager = new AndFixManager(mContext);
-		mPatchDir = new File(mContext.getFilesDir(), DIR);
+		mPatchDir = new File(mContext.getFilesDir(), DIR);//data/data/xxx.xxx/file/apatch(xxx.xxx为该应用包名)
 		mPatchs = new ConcurrentSkipListSet<Patch>();
 		mLoaders = new ConcurrentHashMap<String, ClassLoader>();
 	}
