@@ -87,7 +87,7 @@ public class MainActivity extends Activity implements DownloadStatusListener {
             public void onClick(View v) {
 //                Toast.makeText(MainActivity.this,"fix",Toast.LENGTH_LONG).show();
               /*  EventBus.getDefault().post("Hello AndFix!");*/
-                startActivity(new Intent(MainActivity.this,SecondActivity.class));
+//                startActivity(new Intent(MainActivity.this,SecondActivity.class));
             }
         });
     }

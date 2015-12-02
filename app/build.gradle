@@ -31,9 +31,9 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
+//    testCompile 'junit:junit:4.12'
 //    compile 'com.android.support:appcompat-v7:23.0.1'
-    releaseCompile project(':andfix')
+//    releaseCompile project(':andfix')
 //    compile 'com.tencent.bugly:crashreport:1.2.3.8'
     compile project(':andfix')
     compile 'com.mani:ThinDownloadManager:1.1.0'

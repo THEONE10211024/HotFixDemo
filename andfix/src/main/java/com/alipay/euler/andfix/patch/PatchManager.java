@@ -98,15 +98,19 @@ public class PatchManager {
 		SharedPreferences sp = mContext.getSharedPreferences(SP_NAME,
 				Context.MODE_PRIVATE);
 		String ver = sp.getString(SP_VERSION, null);
+		//判断补丁版对应的APP版本，不相同先删除之前的apatch文件
 		if (ver == null || !ver.equalsIgnoreCase(appVersion)) {
 			cleanPatch();
 			sp.edit().putString(SP_VERSION, appVersion).commit();
 		} else {
+			//初始化补丁包
 			initPatchs();
 		}
 	}
 
 	private void initPatchs() {
+		//将该app私有路径下（/data/data/...）所有文件取出遍历，找到以"apatch"为后缀的文件
+		//解析文件->读取必要信息->存放在mPatchs对象中
 		File[] files = mPatchDir.listFiles();
 		for (File file : files) {
 			addPatch(file);
@@ -208,9 +212,9 @@ public class PatchManager {
 		Set<String> patchNames;
 		List<String> classes;
 		for (Patch patch : mPatchs) {
-			patchNames = patch.getPatchNames();
+			patchNames = patch.getPatchNames();//一般就一个，即patch对应的补丁名称
 			for (String patchName : patchNames) {
-				classes = patch.getClasses(patchName);
+				classes = patch.getClasses(patchName);//该补丁对应的所有被修改的类名称xxx.xxx.MainActivity_CF xxx.xxx.SecondActivity_CF
 				mAndFixManager.fix(patch.getFile(), mContext.getClassLoader(),
 						classes);
 			}

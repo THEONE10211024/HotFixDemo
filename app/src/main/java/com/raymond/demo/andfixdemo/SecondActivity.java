@@ -14,6 +14,8 @@ public class SecondActivity extends Activity {
         super.onCreate(savedInstanceState);
         EventBus.getDefault().register(this);
         setContentView(R.layout.activity_second);
+        Toast.makeText(this,"hello error",Toast.LENGTH_LONG).show();
+
     }
     public void onEventMainThread(String event){
         Toast.makeText(this,"Event received:"+event,Toast.LENGTH_LONG).show();

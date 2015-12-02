@@ -124,7 +124,7 @@ public class AndFixManager {
 			return;
 		}
 
-		if (!mSecurityChecker.verifyApk(file)) {// security check fail
+		if (!mSecurityChecker.verifyApk(file)) {// security check fail,比如 file = "/data/data/com.raymond.demo.andfixdemo/files/apatch/out.apatch"
 			return;
 		}
 
@@ -174,7 +174,8 @@ public class AndFixManager {
 				if (classes != null && !classes.contains(entry)) {
 					continue;// skip, not need fix
 				}
-				clazz = dexFile.loadClass(entry, patchClassLoader);
+				//找到补丁文件中需要修复的类名
+				clazz = dexFile.loadClass(entry, patchClassLoader);//如：class com.raymond.demo.andfixdemo.MainActivity_CF
 				if (clazz != null) {
 					fixClass(clazz, classLoader);
 				}

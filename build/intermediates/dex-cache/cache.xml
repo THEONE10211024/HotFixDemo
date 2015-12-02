@@ -2,18 +2,11 @@
 <items version="2" >
 
     <item
-        jar="E:\files\android\git\AndFixDemoX\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\jars\classes.jar"
+        jar="E:\files\android\git\AndFixDemoX\app\build\intermediates\exploded-aar\AndFixDemoX\andfix\unspecified\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28">
-        <dex dex="E:\files\android\git\AndFixDemoX\app\build\intermediates\pre-dexed\debug\classes-769e381676fd1ee5af7b27cb5e8a4bd9490cc26e.jar" />
-    </item>
-    <item
-        jar="D:\Android\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
-        <dex dex="E:\files\android\git\AndFixDemoX\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-73b9883bfda7e9a6ae205d0e99c174e73ba72aaa.jar" />
+        sha1="c2da4a50fd4ac4ec887407709e3006f5b8b80744">
+        <dex dex="E:\files\android\git\AndFixDemoX\app\build\intermediates\pre-dexed\debug\classes-275f2c728a9f8795210ec195ba750247e00d21e1.jar" />
     </item>
 
 </items>

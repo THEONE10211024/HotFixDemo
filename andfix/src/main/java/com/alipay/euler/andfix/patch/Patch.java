@@ -54,7 +54,7 @@ public class Patch implements Comparable<Patch> {
 	 */
 	private String mName;
 	/**
-	 * create time
+	 * create timegs
 	 */
 	private Date mTime;
 	/**
@@ -87,8 +87,9 @@ public class Patch implements Comparable<Patch> {
 			for (Iterator<?> it = main.keySet().iterator(); it.hasNext();) {
 				attrName = (Attributes.Name) it.next();
 				name = attrName.toString();
-				if (name.endsWith(CLASSES)) {
-					strings = Arrays.asList(main.getValue(attrName).split(","));
+				if (name.endsWith(CLASSES)) {//"Patch-Classes"
+					strings = Arrays.asList(main.getValue(attrName).split(","));//com.raymond.demo.andfixdemo.SecondActivity_CF,com.raymo
+					//nd.demo.andfixdemo.MainActivity$3_CF
 					if (name.equalsIgnoreCase(PATCH_CLASSES)) {
 						mClassesMap.put(mName, strings);
 					} else {
